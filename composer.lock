@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94305c97d0490a8c0a7a69594e02519a",
+    "content-hash": "6ef1b96e4ec895711851bce6238258d2",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1497,6 +1497,42 @@
                 "routing"
             ],
             "time": "2018-02-13T20:26:39+00:00"
+        },
+        {
+            "name": "nimaebrazi/laravel-repository",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nimaebrazi/LaravelRepository.git",
+                "reference": "be9985b545e600d5bb11a4a6dc5a2268c8efa861"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nimaebrazi/LaravelRepository/zipball/be9985b545e600d5bb11a4a6dc5a2268c8efa861",
+                "reference": "be9985b545e600d5bb11a4a6dc5a2268c8efa861",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "nimaebrazi\\LaravelRepository\\LaravelRepositoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "nimaebrazi\\LaravelRepository\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Nima Ebrazi",
+                    "email": "nima.ebrazi1373@gmail.com"
+                }
+            ],
+            "time": "2018-10-24T10:07:21+00:00"
         },
         {
             "name": "opis/closure",
@@ -4071,7 +4107,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "nimaebrazi/laravel-repository": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

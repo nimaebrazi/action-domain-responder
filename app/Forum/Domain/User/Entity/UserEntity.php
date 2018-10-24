@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Forum\Domain\User\Entity;
 
 use Illuminate\Auth\Authenticatable;
 use Laravel\Lumen\Auth\Authorizable;
@@ -8,18 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract
+class UserEntity extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
 
     /**
-     * The attributes that are mass assignable.
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
+     * The attributes that aren't mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email',
-    ];
+    protected $guarded = ['id'];
 
     /**
      * The attributes excluded from the model's JSON form.
